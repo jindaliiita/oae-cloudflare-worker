@@ -3,4 +3,4 @@ main = "src/worker.js"
 compatibility_date = "2025-01-01"
 
 [vars]
-EDGE_OPTIMIZE_TARGET_HOST = "Enter the hostname this Worker should route to."
+EDGE_OPTIMIZE_TARGET_HOST = "Enter the hostname this Worker should route to"
