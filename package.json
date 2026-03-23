@@ -1,0 +1,13 @@
+{
+  "name": "adobe-oae-worker",
+  "version": "1.0.0",
+  "description": "Cloudflare Worker for Adobe Optimize at Edge — routes AI/LLM traffic to Adobe edge",
+  "main": "src/worker.js",
+  "scripts": {
+    "deploy": "wrangler deploy",
+    "dev": "wrangler dev"
+  },
+  "devDependencies": {
+    "wrangler": "^3.0.0"
+  }
+}
