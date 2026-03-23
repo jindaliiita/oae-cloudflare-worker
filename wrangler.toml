@@ -1,11 +1,6 @@
 name = "adobe-oae-worker"
 main = "src/worker.js"
 compatibility_date = "2025-01-01"
-workers_dev = true
 
 [vars]
 TARGET_HOST = "yourdomain.com"
-
-# ADOBE_API_KEY must be set as a Secret after deploy:
-# Cloudflare Dashboard → Workers & Pages → adobe-oae-worker → Settings → Variables and Secrets
-# Or via CLI: wrangler secret put ADOBE_API_KEY

@@ -1,6 +1,7 @@
 {
   "name": "adobe-oae-worker",
   "version": "1.0.0",
+  "private": true,
   "description": "Cloudflare Worker for Adobe Optimize at Edge — routes AI/LLM traffic to Adobe edge",
   "main": "src/worker.js",
   "scripts": {
@@ -9,5 +10,15 @@
   },
   "devDependencies": {
     "wrangler": "^3.0.0"
+  },
+  "cloudflare": {
+    "bindings": {
+      "TARGET_HOST": {
+        "description": "Enter the hostname this Worker should route to."
+      },
+      "ADOBE_API_KEY": {
+        "description": "Paste the Adobe API key. This value will be stored as a secret."
+      }
+    }
   }
 }
