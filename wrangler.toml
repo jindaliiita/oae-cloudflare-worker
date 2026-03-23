@@ -1,0 +1,18 @@
+name = "adobe-oae-worker"
+main = "src/worker.js"
+compatibility_date = "2025-01-01"
+
+# Route pattern — activates this Worker on all paths of your domain.
+# Replace "example.com" with your actual domain during setup.
+# Format: "*yourdomain.com/*"
+# routes = [{ pattern = "*example.com/*", zone_name = "example.com" }]
+
+# Non-secret: your domain without protocol (e.g. "acme.com")
+# Set this during deployment or via: wrangler vars put TARGET_HOST
+[vars]
+TARGET_HOST = ""
+
+# Secret: your Adobe OAE API key
+# Set this after deployment via: wrangler secret put ADOBE_API_KEY
+# Or set it in the Cloudflare dashboard:
+#   Workers & Pages → adobe-oae-worker → Settings → Variables and Secrets
