@@ -76,7 +76,7 @@ async function handleRequest(request, env, ctx) {
 
     // x-forwarded-host: The original site domain
     // Use environment variable if set, otherwise use the request host
-    edgeOptimizeHeaders.set("x-forwarded-host", url.host ?? env.EDGE_OPTIMIZE_TARGET_HOST);
+    edgeOptimizeHeaders.set("x-forwarded-host", env.EDGE_OPTIMIZE_TARGET_HOST ?? url.host);
 
     // x-edgeoptimize-api-key: Your Adobe-provided API key
     edgeOptimizeHeaders.set("x-edgeoptimize-api-key", env.EDGE_OPTIMIZE_API_KEY);
