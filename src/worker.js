@@ -63,8 +63,8 @@ async function handleRequest(request, env, ctx) {
   // 3. Path is targeted for optimization
   if (!isEdgeOptimizeRequest && isAgenticBot && isTargetedPath) {
 
-    // Build the Edge Optimize request URL, todo need to change this
-    const edgeOptimizeURL = `https://edge-dev.tokowaka.now${pathAndQuery}`;
+    // Build the Edge Optimize request URL
+    const edgeOptimizeURL = `https://live.edgeoptimize.net${pathAndQuery}`;
 
     // Clone and modify headers for the Edge Optimize request
     const edgeOptimizeHeaders = new Headers(request.headers);
