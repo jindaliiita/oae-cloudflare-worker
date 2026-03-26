@@ -41,7 +41,7 @@ Click the button above, then complete these steps:
 
 After the Worker deploys, go to:
 
-**Cloudflare Dashboard → Workers & Pages → `edge-optimize-router` → Settings → Variables and Secrets**
+**Cloudflare Dashboard → Workers & Pages → `edge-optimize-router-poc` → Settings → Variables and Secrets**
 
 Add a new **Secret**:
 
@@ -59,15 +59,14 @@ In the same Settings page, add a **Variable**:
 
 ### Step 4 — Add a route
 
-Go to **Workers & Pages → `edge-optimize-router` → Triggers → Routes**
+Go to **Cloudflare Dashboard → Workers & Pages → `edge-optimize-router-poc` → Settings → Triggers → Routes** and click **Add route**.
 
-Add a route:
+| Field | Value |
+|---|---|
+| Route | `*yourdomain.com/*` |
+| Zone | Select your domain from the dropdown |
 
-```
-*yourdomain.com/*
-```
-
-Select your zone from the dropdown.
+> Replace `yourdomain.com` with your actual domain. The zone dropdown lists all domains in your Cloudflare account.
 
 ---
 
@@ -96,7 +95,7 @@ x-edgeoptimize-request-id: <some-id>
 
 To disable the Worker instantly, go to:
 
-**Cloudflare Dashboard → Workers & Pages → `edge-optimize-router` → Triggers → Routes**
+**Cloudflare Dashboard → Workers & Pages → `edge-optimize-router-poc` → Triggers → Routes**
 
 Delete the route. Your origin will serve all traffic again immediately. The Worker remains deployed but inactive.
 
