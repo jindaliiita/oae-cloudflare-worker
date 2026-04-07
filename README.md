@@ -2,7 +2,7 @@
 
 This Worker routes AI/LLM agent traffic (GPTBot, ChatGPT-User, ClaudeBot, etc.) to Adobe's Optimize at Edge service, while passing human and SEO bot traffic directly to your origin — unchanged.
 
-[![Deploy to Cloudflare](https://deploy.workers.cloudflare.com/button)](https://deploy.workers.cloudflare.com/?url=https://github.com/jindaliiita/oae-cloudflare-worker/tree/main/cloudflare/automation)
+[![Deploy to Cloudflare](https://deploy.workers.cloudflare.com/button)](https://deploy.workers.cloudflare.com/?url=https://github.com/jindaliiita/oae-cloudflare-worker)
 
 ---
 
@@ -47,7 +47,7 @@ Add a new **Secret**:
 
 | Name | Value |
 |---|---|
-| `ADOBE_API_KEY` | Your API key from Adobe LLM Optimizer |
+| `EDGE_OPTIMIZE_API_KEY` | Your API key from Adobe LLM Optimizer |
 
 ### Step 3 — Set your domain
 
@@ -55,7 +55,7 @@ In the same Settings page, add a **Variable**:
 
 | Name | Value |
 |---|---|
-| `TARGET_HOST` | Your domain without protocol, e.g. `acme.com` |
+| `EDGE_OPTIMIZE_TARGET_HOST` | Your domain without protocol, e.g. `acme.com` |
 
 ### Step 4 — Add a route
 
@@ -123,8 +123,8 @@ To add more patterns, edit `cloudflare/automation/src/worker.js` and redeploy.
 
 | Variable | Type | Description |
 |---|---|---|
-| `ADOBE_API_KEY` | Secret | Your API key from Adobe LLM Optimizer |
-| `TARGET_HOST` | Variable | Your domain without protocol (e.g. `acme.com`) |
+| `EDGE_OPTIMIZE_API_KEY` | Secret | Your API key from Adobe LLM Optimizer |
+| `EDGE_OPTIMIZE_TARGET_HOST` | Variable | Your domain without protocol (e.g. `acme.com`) |
 
 ---
 
