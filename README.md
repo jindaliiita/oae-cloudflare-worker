@@ -2,7 +2,7 @@
 
 This Worker routes AI/LLM agent traffic (GPTBot, ChatGPT-User, ClaudeBot, etc.) to Adobe's Optimize at Edge service, while passing human and SEO bot traffic directly to your origin — unchanged.
 
-[![Deploy to Cloudflare](https://deploy.workers.cloudflare.com/button)](https://deploy.workers.cloudflare.com/?url=https://github.com/adobe-rnd/oae-cloudflare-worker)
+[![Deploy to Cloudflare](https://deploy.workers.cloudflare.com/button)](https://deploy.workers.cloudflare.com/?url=https://github.com/adobe-rnd/oae-cloudflare-worker&path=cloudflare/automation)
 
 ---
 
@@ -115,7 +115,7 @@ The Worker currently detects:
 - Applebot-Extended
 - AdobeEdgeOptimize
 
-To add more patterns, edit `src/worker.js` and redeploy.
+To add more patterns, edit `cloudflare/automation/src/worker.js` and redeploy.
 
 ---
 
